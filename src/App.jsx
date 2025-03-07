@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import DataPage from './pages/DataPage';
+import DataPage from './pages/DataPage.jsx';
 
 function App () {
   return (
