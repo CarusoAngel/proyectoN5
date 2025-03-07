@@ -6,10 +6,12 @@ import DataPage from './pages/DataPage';
 function App () {
   return (
     <BrowserRouter>
-    <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/data" element={<DataPage />} />
-    </Routes>
+      <div>
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/data" element={<DataPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
