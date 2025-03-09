@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 
 function DataPage () {
 
-    console.log("DataPage se está renderizando..");
-
     const [launches, setLaunches] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -14,18 +12,29 @@ function DataPage () {
             if (!response.ok) {
                 throw new Error(`Error HTTP:${response.status}`);
             }
-            return response.json()
+            return response.json();
         })
         .then((data) => {
-            setLaunches(data.slice(0, 10));
+            setLaunches(data.slice(0, 8));
             setLoading(false);
         })
         .catch((error) => {
             console.error('Error al obtener los datos:', error);
-            setError(error.message);
+            setError("No se pudo cargar la información de los lanzamientos.");
             setLoading(false);
-        })
+        });
     }, []);
+
+    const localImages = [
+        "/assets/1.png",
+        "/assets/2.png",
+        "/assets/3.png",
+        "/assets/4.png",
+        "/assets/5.png",
+        "/assets/6.png",
+        "/assets/7.png",
+        "/assets/8.png",
+    ];
 
     return (
         <div className="container mt-5">
@@ -37,9 +46,9 @@ function DataPage () {
                 <p className="text-center">Cargando lanzamientos...</p>
             ) : (
                 <div className="row">
-                    {launches.map((launch) => (
+                    {launches.map((launch, index) => (
                         <div key={launch.id} className="col-md-6 mb-4">
-                            <div className="card p-3 shadow launch-card">
+                            <div className="card p-3 shadow launch-card d-flex flex-column justify-content-between h-100 overflow-hidden">
                                 <h5 className="fw-bold">{launch.name}</h5>
 
                                 <p>
@@ -47,15 +56,16 @@ function DataPage () {
                                 </p>
 
                                 <p>
-                                    <strong>Detalles:</strong> {launch.details ? launch.details : "Sin información"}
+                                    <strong>Detalles:</strong> {launch.details ? launch.details : "Información próximamente..."}
                                 </p>
 
-                                <div className="text-center">
-                                    {launch.links.patch.small ? (
-                                        <img src={launch.links.patch.small} alt={`Misión ${launch.name}`} className="img-fluid launch-img" />
-                                ) : (
-                                    <img src="/assets/default-mission.png" alt="Misión no disponible" className="img-fluid launch-img" />
-                                )}
+                                <div className="text-center mt-auto">
+
+                                    <img 
+                                        src={launch.links.patch.small || (index < localImages.length ? localImages[index] : "/assets/default-mission.png")}
+                                        alt={`Misión ${launch.name}`}
+                                        className="img-fluid launch-img"
+                                    />
                                 </div>
                             </div>
                         </div>
