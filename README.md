@@ -73,7 +73,7 @@ Si ocurre un error al obtener los datos, se muestra un mensaje de error.
 
 ## Este proyecto está desplegado en Netlify y puedes verlo en el siguiente enlace:
 
-[Ver Proyecto en Netlify] https://magnificent-froyo-a8a667.netlify.app/data
+[Ver Proyecto en Netlify] https://magnificent-froyo-a8a667.netlify.app/
 
 
 MUCHAS GRACIAS. 
