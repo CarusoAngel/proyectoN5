@@ -1,12 +1,82 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ProyectoN5
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hola, mi nombre es Angel Caruso y este es mi proyecto ProyectoN5. Esta es una aplicación desarrollada en React que consume datos de una API pública para mostrar los próximos lanzamientos espaciales de SpaceX. Implementé componentes funcionales, React Router para la navegación, manejo de estado con hooks, gestión de errores con Error Boundaries y desplegué el proyecto en un servicio de terceros.
 
-## Expanding the ESLint configuration
+También en el desarrollo del proyecto decidí incluir un Navbar para poder regresar a la página principal desde el menú y también incluí imágenes fabricadas con IA ya que la API no las proporcionaba en la mayoria de los recuadros de información.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Características:
+
+- Muestra los próximos lanzamientos de SpaceX utilizando la API pública.
+
+- Implementación de React Router para navegación entre páginas.
+
+- Manejo de estado con hooks como useState y useEffect.
+
+- Manejo de errores con Error Boundaries.
+
+- Implementación de estilos con Bootstrap.
+
+- Despliegue en un servicio externo como Netlify o Render.
+
+## Requisitos Previos
+
+Antes de ejecutar este proyecto, asegúrate de tener instalado lo siguiente:
+
+- Node.js (versión 14 o superior)
+
+- npm (gestor de paquetes)
+
+## Instalación y Ejecución
+
+Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
+
+### Clonar el repositorio:
+
+git clone https://github.com/CarusoAngel/proyectoN5
+
+### Navegar al directorio del proyecto:
+
+cd proyectoN5
+
+### Instalar las dependencias:
+
+npm install
+
+### Iniciar el servidor de desarrollo:
+
+npm run dev
+
+# Uso
+
+En la página de inicio, se muestra una introducción a la aplicación.
+
+En la sección de lanzamientos, se obtiene información sobre los próximos lanzamientos de SpaceX.
+
+Si ocurre un error al obtener los datos, se muestra un mensaje de error.
+
+# Tecnologías Utilizadas:
+
+- React
+
+- React Router
+
+- Bootstrap
+
+- JavaScript (ES6+)
+
+- API pública de SpaceX
+
+
+
+MUCHAS GRACIAS. 
+
+
+
+
+## Autor
+
+- [Caruso Angel](https://github.com/CarusoAngel)
+
